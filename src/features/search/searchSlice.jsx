@@ -18,6 +18,7 @@ const searchSlice = createSlice({
   },
 });
 
+
 export async function loader({ request }) {
   // 1- get the data from the API
   const res = await fetch(`https://api.thecatapi.com/v1/breeds`);
