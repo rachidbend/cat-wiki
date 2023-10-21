@@ -18,5 +18,11 @@ const searchSlice = createSlice({
   },
 });
 
+export async function loader({request}) {
+console.log(request)
+
+return null
+}
+
 export default searchSlice.reducer;
 export const { updateSearchQuery, searchoptionsLoaded } = searchSlice.actions;
