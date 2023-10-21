@@ -18,9 +18,7 @@ const searchSlice = createSlice({
   },
 });
 
-export async function loader({ request }) {
-  console.log(request);
-  /*
+export async function loader() {
   // 1- get the data from the API
   const res = await fetch(`https://api.thecatapi.com/v1/breeds`);
   const data = await res.json();
@@ -33,10 +31,10 @@ export async function loader({ request }) {
     };
     return treatedBreed;
   });
-  console.log(treetedData);
-  // return treetedData;
-  */
-  return null;
+
+  return treetedData;
+
+  // return null;
 }
 
 export default searchSlice.reducer;
