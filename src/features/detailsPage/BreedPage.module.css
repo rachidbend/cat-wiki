@@ -1,0 +1,14 @@
+.breedImage {
+  width: 20rem;
+  height: auto;
+}
+
+.otherImageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.otherImage {
+  width: 8rem;
+  height: auto;
+}

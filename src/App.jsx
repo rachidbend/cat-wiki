@@ -1,8 +1,12 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import AppLayout from './ui/AppLayout';
+import AppLayout from './ui/AppLayout/AppLayout';
 
 import { loader as searchLoader } from './features/search/searchSlice';
 import ErrorMessage from './ui/ErrorMessage';
+import Homepage from './features/homepage/Homepage';
+import { action as searchAction } from './features/homepage/Homepage';
+import BreedPage from './features/detailsPage/BreedPage';
+import { loader as breedLoader } from './features/detailsPage/BreedPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -11,9 +15,10 @@ function App() {
       children: [
         {
           path: '/',
-          element: <div>cat wiki router</div>,
+          element: <Homepage />,
 
           loader: searchLoader,
+          action: searchAction,
           errorElement: <ErrorMessage />,
         },
         {
@@ -30,7 +35,8 @@ function App() {
         },
         {
           path: '/breed/:id',
-          element: <div>this will be some breed id</div>,
+          element: <BreedPage />,
+          loader: breedLoader,
         },
       ],
     },
