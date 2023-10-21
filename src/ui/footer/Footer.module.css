@@ -1,0 +1,13 @@
+.footer {
+  background-color: hsla(0, 0%, 0%, 1);
+  border-top-left-radius: 4.2rem;
+  border-top-right-radius: 4.2rem;
+  color: #fff;
+  padding: 3rem 1.7rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo {
+  outline: #fff;
+}
