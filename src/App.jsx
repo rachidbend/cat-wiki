@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import AppLayout from './ui/AppLayout';
+import AppLayout from './ui/AppLayout/AppLayout';
 
 import { loader as searchLoader } from './features/search/searchSlice';
 import ErrorMessage from './ui/ErrorMessage';
