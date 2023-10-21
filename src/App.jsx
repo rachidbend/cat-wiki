@@ -1,5 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AppLayout from './ui/AppLayout';
+import { loader as searchLoader } from './features/search/searchSlice';
+import ErrorMessage from './ui/ErrorMessage';
 
 function App() {
   const router = createBrowserRouter([
@@ -9,6 +11,8 @@ function App() {
         {
           path: '/',
           element: <div>cat wiki router</div>,
+          loader: searchLoader,
+          errorElement: <ErrorMessage />,
         },
         {
           path: '/most-searched',
