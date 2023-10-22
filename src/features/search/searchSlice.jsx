@@ -18,24 +18,5 @@ const searchSlice = createSlice({
   },
 });
 
-export async function loader() {
-  // 1- get the data from the API
-  const res = await fetch(`https://api.thecatapi.com/v1/breeds`);
-  const data = await res.json();
-
-  // 2- treet the data to only get the names and ids of each breed
-  const treetedData = data.map(breed => {
-    const treatedBreed = {
-      id: breed.id,
-      name: breed.name,
-    };
-    return treatedBreed;
-  });
-
-  return treetedData;
-
-  // return null;
-}
-
 export default searchSlice.reducer;
 export const { updateSearchQuery, searchoptionsLoaded } = searchSlice.actions;

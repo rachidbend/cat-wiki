@@ -22,7 +22,7 @@ export default function BreedPage() {
       <div>
         <h2>{breedDetails.name}</h2>
         <p>{breedDetails.description}</p>
-        <p>Temperament: {breedDetails.temperemant}</p>
+        <p>Temperament: {breedDetails.temperament}</p>
         <p>origin: {breedDetails.origin}</p>
         <p>life span: {breedDetails.life_span} years</p>
       </div>

@@ -1,0 +1,34 @@
+.mostSearchedContianer {
+  background-color: hsla(43, 11%, 88%, 1);
+  padding: 2.9rem;
+  border-bottom-left-radius: 2.4rem;
+  border-bottom-right-radius: 2.4rem;
+}
+.mostSearchedHomeContianer {
+  display: flex;
+  gap: 1.1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.mostSearchedHomeHeader {
+  color: #291507;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 1.73rem;
+}
+.mostSearchedHomeHeading {
+  font-family: 'Montserrat', sans-serif;
+  color: #291507;
+
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 2.6rem;
+}
