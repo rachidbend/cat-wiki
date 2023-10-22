@@ -32,7 +32,7 @@ export default function MostSearchedHomeElement({ breed }) {
   );
 }
 
-async function getImageLink(imageId) {
+export async function getImageLink(imageId) {
   // get the referance image of the breed
   const refrenceImageRes = await fetch(
     `https://api.thecatapi.com/v1/images/${imageId}`

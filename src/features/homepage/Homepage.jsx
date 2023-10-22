@@ -64,7 +64,9 @@ export async function loader() {
       id: breed.id,
       name: breed.name,
       imageId: breed.reference_image_id,
+      description: breed.description,
     };
+
     return treatedBreed;
   });
 
