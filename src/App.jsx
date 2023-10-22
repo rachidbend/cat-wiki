@@ -7,6 +7,7 @@ import Homepage from './features/homepage/Homepage';
 import { action as searchAction } from './features/homepage/Homepage';
 import BreedPage from './features/detailsPage/BreedPage';
 import { loader as breedLoader } from './features/detailsPage/BreedPage';
+import MostSearchedPage from './ui/mostSearhcedHomePage/MostSearchedPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -23,7 +24,7 @@ function App() {
         },
         {
           path: '/most-searched',
-          element: <div>top 10 most searched</div>,
+          element: <MostSearchedPage />,
         },
         {
           path: '/article',
