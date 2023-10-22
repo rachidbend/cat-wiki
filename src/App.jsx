@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AppLayout from './ui/AppLayout/AppLayout';
 
-import { loader as searchLoader } from './features/search/searchSlice';
+import { loader as searchLoader } from './features/homepage/Homepage';
 import ErrorMessage from './ui/ErrorMessage';
 import Homepage from './features/homepage/Homepage';
 import { action as searchAction } from './features/homepage/Homepage';
