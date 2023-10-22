@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import styles from './MostSearhcedHomePage.module.css';
 import MostSearchedHomeElement from './MostSearchedHomeElement';
+import { Link } from 'react-router-dom';
 export default function MostSearhcedHomePage() {
   const mostSearchedBreeds = useSelector(
     state => state.mostSearched.mostSearchedBreeds
@@ -15,6 +16,7 @@ export default function MostSearhcedHomePage() {
       <h2 className={styles.mostSearchedHomeHeading}>
         66+ Breeds For you <br /> to discover
       </h2>
+      <Link to="/most-searched">Learn more</Link>
       <div className={styles.mostSearchedHomeContianer}>
         {fourMostSearchedBreeds.map(breed => {
           return <MostSearchedHomeElement breed={breed} key={breed.id} />;
