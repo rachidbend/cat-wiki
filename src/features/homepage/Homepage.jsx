@@ -7,6 +7,7 @@ import store from '../../store';
 import { mostSearchedLoaded } from '../mostSearched/mostSearchedSlice';
 import MostSearhcedHomePage from '../../ui/mostSearhcedHomePage/MostSearhcedHomePage';
 import ArticleComponent from '../article/ArticleComponent';
+import Search from '../search/Search';
 
 export default function Homepage() {
   // get all of the available breeds data, to show them as options
@@ -25,24 +26,7 @@ export default function Homepage() {
 
   return (
     <>
-      <div className={`${styles.homepage}`}>
-        <Form method="POST">
-          <h2>catwiki</h2>
-          <p>Get to know more about your cat breed</p>
-          <select name="breed" placeholder="Search">
-            {
-              /* put all the available breeds as option to choose from */
-              allBreeds.map(breed => (
-                <option key={breed.id} value={breed.id}>
-                  {breed.name}
-                </option>
-              ))
-            }
-          </select>
-
-          <button type="submit">search</button>
-        </Form>
-      </div>
+      <Search />
       <MostSearhcedHomePage />
       <ArticleComponent />
     </>
@@ -81,6 +65,10 @@ export async function loader() {
   // filter the breeds infor based on that id
   const top = treetedData.filter(item => list.includes(item.id));
 
+  // Add the treated options to the store
+  store.dispatch(searchoptionsLoaded(treetedData));
+
+  // Add most searched breeds to the store
   store.dispatch(mostSearchedLoaded(top));
 
   return treetedData;
