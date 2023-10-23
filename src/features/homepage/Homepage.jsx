@@ -9,6 +9,7 @@ import MostSearhcedHomePage from '../../ui/mostSearhcedHomePage/MostSearhcedHome
 import ArticleComponent from '../article/ArticleComponent';
 
 export default function Homepage() {
+  // get all of the available breeds data, to show them as options
   const allBreeds = useLoaderData();
   const dispatch = useDispatch();
 
@@ -19,6 +20,8 @@ export default function Homepage() {
     },
     [allBreeds, dispatch]
   );
+
+  if (allBreeds?.length === 0 || allBreeds === null) return;
 
   return (
     <>
@@ -72,10 +75,13 @@ export async function loader() {
     return treatedBreed;
   });
 
-  // get the first 4 breeds ID, Name, and image
+  // get the first 10 breeds ID, Name, and image
+  // get the list of IDs of the most popular breeds
   const list = store.getState().mostSearched.mostSearchedList;
+  // filter the breeds infor based on that id
   const top = treetedData.filter(item => list.includes(item.id));
 
   store.dispatch(mostSearchedLoaded(top));
+
   return treetedData;
 }
