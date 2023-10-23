@@ -8,6 +8,7 @@ import { action as searchAction } from './features/homepage/Homepage';
 import BreedPage from './features/detailsPage/BreedPage';
 import { loader as breedLoader } from './features/detailsPage/BreedPage';
 import MostSearchedPage from './ui/mostSearhcedHomePage/MostSearchedPage';
+import ArticlePage from './features/article/ArticlePage';
 
 function App() {
   const router = createBrowserRouter([
@@ -32,7 +33,7 @@ function App() {
         },
         {
           path: '/article/why-you-should-have-a-cat',
-          element: <div>why you should have a cat</div>,
+          element: <ArticlePage />,
         },
         {
           path: '/breed/:id',
