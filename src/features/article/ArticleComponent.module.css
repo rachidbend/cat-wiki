@@ -10,7 +10,9 @@
 .heading {
   color: #291507;
 
+
   font-family: 'Montserrat', sans-serif;
+
   font-size: 4rem;
 
   font-weight: 700;
@@ -20,7 +22,9 @@
 .description {
   color: #291507;
 
+
   font-family: 'Montserrat', sans-serif;
+
   font-size: 1.8rem;
 
   font-weight: 500;
@@ -30,7 +34,9 @@
 .link {
   color: rgba(41, 21, 7, 0.6);
   display: inline-block;
+
   font-family: 'Montserrat', sans-serif;
+
   font-size: 1.2rem;
 
   font-weight: 700;
@@ -71,3 +77,4 @@
   grid-row-start: 1;
   grid-row-end: 3;
 }
+
