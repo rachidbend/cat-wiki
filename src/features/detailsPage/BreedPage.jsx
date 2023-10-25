@@ -6,6 +6,7 @@ import {
   otherImagesLoaded,
 } from './detailsSlice';
 import styles from './BreedPage.module.css';
+import Score from './Score';
 
 // this page is the one responsible for deisplayind a chosen breeds details
 // still under construction
@@ -24,23 +25,64 @@ export default function BreedPage() {
     return;
 
   return (
-    <div>
-      <div>
+    <div className={styles.breedPageContainer}>
+      <h2 className={styles.breedName}>{breedDetails.name}</h2>
+      <div className={styles.imgContainer}>
         <img
           className={styles.breedImage}
           src={breedImage.url}
           alt={breedDetails.name}
         />
       </div>
-      <div>
-        <h2>{breedDetails.name}</h2>
-        <p>{breedDetails.description}</p>
-        <p>Temperament: {breedDetails.temperament}</p>
-        <p>origin: {breedDetails.origin}</p>
-        <p>life span: {breedDetails.life_span} years</p>
+      <div className={styles.details}>
+        <p className={styles.description}>{breedDetails.description}</p>
+        <p className={`${styles.stat}`}>
+          <span>Temperament:</span>
+          {breedDetails.temperament}.
+        </p>
+        <p className={`${styles.stat}`}>
+          <span>Origin:</span>
+          {breedDetails.origin}
+        </p>
+        <p className={`${styles.stat}`}>
+          <span>Life span:</span>
+          {breedDetails.life_span} years
+        </p>
+        <p className={`${styles.stat}`}>
+          <span>Adaptability:</span>
+          <Score score={breedDetails.adaptability} />
+        </p>
+        <p className={`${styles.stat}`}>
+          <span>Affection level:</span>
+          <Score score={breedDetails.affection_level} />
+        </p>
+        <p className={`${styles.stat}`}>
+          <span>Child friendly:</span>
+          <Score score={breedDetails.child_friendly} />
+        </p>
+        <p className={`${styles.stat}`}>
+          <span>Grooming:</span>
+          <Score score={breedDetails.grooming} />
+        </p>
+        <p className={`${styles.stat}`}>
+          <span>Intelligence:</span>
+          <Score score={breedDetails.intelligence} />
+        </p>
+        <p className={`${styles.stat}`}>
+          <span> Health issues:</span>
+          <Score score={breedDetails.health_issues} />
+        </p>
+        <p className={`${styles.stat}`}>
+          <span>Social needs:</span>
+          <Score score={breedDetails.social_needs} />
+        </p>
+        <p className={`${styles.stat}`}>
+          <span>Stranger friendly:</span>
+          <Score score={breedDetails.stranger_friendly} />
+        </p>
       </div>
-      <p>more to come...</p>
-      <h2>other images</h2>
+
+      <h2 className={styles.heading}>Other images</h2>
       <div className={styles.otherImageContainer}>
         {otherBreedImages.map(image => (
           <img
