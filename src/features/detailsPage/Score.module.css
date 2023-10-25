@@ -1,0 +1,15 @@
+.scoreContainer {
+  display: flex;
+  /* justify-content: center; */
+  gap: 0.4rem;
+}
+.score {
+  display: inline-block;
+  width: 100%;
+  height: 1rem;
+  border-radius: 0.6rem;
+  background: #e0e0e0;
+}
+.scoreActive {
+  background: #544439;
+}
