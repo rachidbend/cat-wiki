@@ -18,10 +18,11 @@ export default function MostSearhcedHomePage() {
     <div className={styles.mostSearchedContianer}>
       <h3 className={styles.mostSearchedHomeHeader}>Most Searched Breeds</h3>
 
-      <h2 className={styles.mostSearchedHomeHeading}>
-        66+ Breeds For you <br /> to discover
-      </h2>
-      <Link to="/most-searched">Learn more</Link>
+      <Link to="/most-searched" className={styles.headingLink}>
+        <h2 className={styles.mostSearchedHomeHeading}>
+          66+ Breeds For you <br /> to discover
+        </h2>
+      </Link>
       <div className={styles.mostSearchedHomeContianer}>
         {/* then show rendrer a sepritae element for each breed */}
         {fourMostSearchedBreeds.map(breed => {

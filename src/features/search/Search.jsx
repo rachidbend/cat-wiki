@@ -1,8 +1,9 @@
 import { Form, redirect } from 'react-router-dom';
 import styles from './Search.module.css';
 import { useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import store from '../../store';
+import iconSearch from '../../assets/icon-search.svg';
 
 // used in filtering the option based on the query
 function checkIfTrue(value) {
@@ -30,7 +31,10 @@ function filterOptions(query, allBreeds) {
 export default function Search() {
   // This state is used to keep track of the query
   const [query, setQuery] = useState('');
-  const [isFocused, setIsFocused] = useState('');
+  const [openOptions, setOpenOptions] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  useEffect(function () {}, []);
 
   // Get the list of all available breeds
   const allBreeds = useSelector(state => state.search.searchOptions);
@@ -53,8 +57,11 @@ export default function Search() {
     // like so: navigate(`/breed/${id}`)
   }
 
-  // use onFocus on the search to display the option if search is focused, or there is a query
-  function handeOnFocus() {}
+  // it opens the search overlay in mobile view
+  function handleOpenSearch() {
+    if (isSearchOpen === true) setIsSearchOpen(false);
+    if (isSearchOpen === false) setIsSearchOpen(true);
+  }
 
   return (
     <div className={`${styles.search}`}>
@@ -62,15 +69,18 @@ export default function Search() {
       <p>
         Get to know more about <br /> your cat breed
       </p>
-      <Form method="POST">
+      <Form autoComplete="off" method="POST" className={styles.form}>
+        <img src={iconSearch} className={styles.iconSearch} alt="Search icon" />
         <input
           onChange={handleSearchChange}
+          onClick={handleOpenSearch}
           value={query}
           type="text"
           name="breed"
           placeholder="Search"
+          className={styles.searchInput}
         ></input>
-        {query && (
+        {query !== '' ? (
           <div className={styles.searchOptionsContainer}>
             <ul>
               {filteredOptions.map(breed => (
@@ -84,8 +94,48 @@ export default function Search() {
               ))}
             </ul>
           </div>
-        )}
+        ) : null}
       </Form>
+      {/* instead of changing the styling of the search component when it is open, this FORM is used instead with some modifications to it */}
+      {query !== '' || isSearchOpen === true ? (
+        <Form autoComplete="off" method="POST" className={styles.formMobile}>
+          <div className={styles.containeMobiler}>
+            <div className={styles.iconCloseContainer}>
+              <span className={styles.iconClose} onClick={handleOpenSearch}>
+                X
+              </span>
+            </div>
+            <div className={styles.inputContainerMobile}>
+              <img
+                src={iconSearch}
+                className={styles.iconSearchMobile}
+                alt="Search icon"
+              />
+              <input
+                onChange={handleSearchChange}
+                value={query}
+                type="text"
+                name="breed"
+                placeholder="Search"
+                className={styles.searchInputMobile}
+              ></input>
+            </div>
+          </div>
+          <div className={styles.searchOptionsContainerMobile}>
+            <ul>
+              {filteredOptions.map(breed => (
+                <li
+                  onClick={() => onOptionClick(breed.name)}
+                  key={breed.id}
+                  value={breed.id}
+                >
+                  {breed.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Form>
+      ) : null}
     </div>
   );
 }
