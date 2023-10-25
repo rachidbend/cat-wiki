@@ -11,7 +11,9 @@
   flex-wrap: wrap;
   flex: 1;
 }
-
+.headingLink {
+  text-decoration: none;
+}
 .mostSearchedHomeHeader {
   color: #291507;
 
