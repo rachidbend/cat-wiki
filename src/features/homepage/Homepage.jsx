@@ -33,15 +33,6 @@ export default function Homepage() {
   );
 }
 
-export async function action({ request }) {
-  // get the selected breed from the form
-  const formData = await request.formData();
-  // Object.fromEntries is needed to get the data as an object
-  const data = Object.fromEntries(formData);
-  // redirect to the breed details page with the breed selected
-  return redirect(`/breed/${data.breed}`);
-}
-
 export async function loader() {
   // 1- get the data from the API
   const res = await fetch(`https://api.thecatapi.com/v1/breeds`);
