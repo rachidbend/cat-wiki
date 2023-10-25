@@ -1,13 +1,18 @@
+/* eslint-disable react/prop-types */
 import styles from './MostSearchedElement.module.css';
 import { useEffect, useState } from 'react';
-import { getImageLink } from './MostSearchedHomeElement';
+
 import { Link } from 'react-router-dom';
+import { getImageLink } from '../../helpers';
 
 export default function MostSearchedElement({ breed, index }) {
+  // using the state to cause a rerendre when this element gets the image URL
   const [imgUrl, setImgUrl] = useState('');
+  // this effect is used to get the image URL of the breed it was given
   useEffect(
     function () {
       async function getImgUrl() {
+        // no need to re fetch if there is an image URL
         if (imgUrl !== '') return;
         const img = await getImageLink(breed.imageId);
         setImgUrl(img);
@@ -17,8 +22,9 @@ export default function MostSearchedElement({ breed, index }) {
     [breed.imageId, imgUrl]
   );
 
-  if (imgUrl === '') return <p>Loading...</p>;
-
+  // if there is no image URL don't display anything
+  if (imgUrl === '') return;
+  // display the breed element
   return (
     <div className={styles.container}>
       <Link className={styles.link} to={`/breed/${breed.id}`}>
