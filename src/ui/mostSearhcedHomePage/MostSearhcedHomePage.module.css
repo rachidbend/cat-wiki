@@ -11,15 +11,8 @@
   gap: 1.3rem;
   grid-template-columns: 1fr 1fr;
 }
-<<<<<<< HEAD
 
-.mostSearchedHomeHeader {
-=======
-.headingLink {
-  text-decoration: none;
-}
 .headingSecondary {
->>>>>>> d895f5c763e046b1f748290fff9f921aa855b94e
   color: #291507;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;

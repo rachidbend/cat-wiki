@@ -1,14 +1,11 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MostSearchedHomeElement.module.css';
 
-<<<<<<< HEAD
-export default function MostSearchedHomeElement({ breed }) {
-=======
 export default function MostSearchedHomeElement({ breed, index }) {
   // using the state to cause a rerendre when this element gets the image URL
->>>>>>> d895f5c763e046b1f748290fff9f921aa855b94e
+
   const [imgUrl, setImgUrl] = useState('');
   useEffect(
     function () {
