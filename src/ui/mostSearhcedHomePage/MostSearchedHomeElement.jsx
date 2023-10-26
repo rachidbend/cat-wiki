@@ -1,18 +1,18 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MostSearchedHomeElement.module.css';
-import { getImageLink } from '../../helpers';
 
+<<<<<<< HEAD
 export default function MostSearchedHomeElement({ breed }) {
+=======
+export default function MostSearchedHomeElement({ breed, index }) {
   // using the state to cause a rerendre when this element gets the image URL
+>>>>>>> d895f5c763e046b1f748290fff9f921aa855b94e
   const [imgUrl, setImgUrl] = useState('');
-  // this effect is used to get the image URL of the breed it was given
   useEffect(
     function () {
       async function getImgUrl() {
-        // no need to re fetch if there is an image URL
-        if (imgUrl !== '') return;
         const img = await getImageLink(breed.imageId);
         setImgUrl(img);
       }
@@ -21,20 +21,34 @@ export default function MostSearchedHomeElement({ breed }) {
     [breed.imageId, imgUrl]
   );
 
-  // if there is no image URL don't display anything
-  if (imgUrl === '') return;
+  if (imgUrl === '') return <p>Loading...</p>;
 
-  // display the breed element
   return (
     <Link
       to={`/breed/${breed.id}`}
-      className={styles.topSearchedHomeLink}
+      className={styles.link}
       key={`mostSearched_${breed.id}`}
     >
       <div>
-        <img className={styles.topSearchedHomeImage} src={imgUrl} alt="" />
-        <p className={styles.topSearchedHomeName}>{breed.name}</p>
+        <img
+          className={`${styles.image} ${
+            index === 0 ? styles.firstLinkImg : ''
+          }`}
+          src={imgUrl}
+          alt=""
+        />
+        <p className={styles.name}>{breed.name}</p>
       </div>
     </Link>
   );
+}
+
+export async function getImageLink(imageId) {
+  // get the referance image of the breed
+  const refrenceImageRes = await fetch(
+    `https://api.thecatapi.com/v1/images/${imageId}`
+  );
+  const refrenceImageData = await refrenceImageRes.json();
+
+  return refrenceImageData.url;
 }

@@ -1,36 +1,45 @@
-.mostSearchedContianer {
+.container {
   background-color: hsla(43, 11%, 88%, 1);
-  padding: 2.9rem;
+  padding: 1.82rem 2.9rem;
+  padding-bottom: 5.3rem;
   border-bottom-left-radius: 2.4rem;
   border-bottom-right-radius: 2.4rem;
+  margin-bottom: 6.37rem;
 }
-.mostSearchedHomeContianer {
-  display: flex;
-  gap: 1.1rem;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex: 1;
+.breedContainer {
+  display: grid;
+  gap: 1.3rem;
+  grid-template-columns: 1fr 1fr;
 }
+<<<<<<< HEAD
+
+.mostSearchedHomeHeader {
+=======
 .headingLink {
   text-decoration: none;
 }
-.mostSearchedHomeHeader {
+.headingSecondary {
+>>>>>>> d895f5c763e046b1f748290fff9f921aa855b94e
   color: #291507;
-
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
-  margin-bottom: 1.73rem;
+  margin-bottom: 0.53rem;
 }
-.mostSearchedHomeHeading {
+.headingPrimary {
   font-family: 'Montserrat', sans-serif;
   color: #291507;
-
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin-bottom: 2.6rem;
+}
+.underline {
+  display: inline-block;
+  width: 4.0887rem;
+  height: 0.3rem;
+  background-color: #291507;
+  border-radius: 7rem;
+  margin-bottom: 1.73rem;
 }
