@@ -6,11 +6,8 @@ import { searchoptionsLoaded } from '../search/searchSlice';
 import store from '../../store';
 import { mostSearchedLoaded } from '../mostSearched/mostSearchedSlice';
 import MostSearhcedHomePage from '../../ui/mostSearhcedHomePage/MostSearhcedHomePage';
-import ArticleComponent from '../article/ArticleComponent';
-import Search from '../search/Search';
 
 export default function Homepage() {
-  // get all of the available breeds data, to show them as options
   const allBreeds = useLoaderData();
   const dispatch = useDispatch();
 
@@ -22,15 +19,38 @@ export default function Homepage() {
     [allBreeds, dispatch]
   );
 
-  if (allBreeds?.length === 0 || allBreeds === null) return;
-
   return (
     <>
-      <Search />
+      <div className={`${styles.homepage}`}>
+        <Form method="POST">
+          <h2>catwiki</h2>
+          <p>Get to know more about your cat breed</p>
+          <select name="breed" placeholder="Search">
+            {
+              /* put all the available breeds as option to choose from */
+              allBreeds.map(breed => (
+                <option key={breed.id} value={breed.id}>
+                  {breed.name}
+                </option>
+              ))
+            }
+          </select>
+
+          <button type="submit">search</button>
+        </Form>
+      </div>
       <MostSearhcedHomePage />
-      <ArticleComponent />
     </>
   );
+}
+
+export async function action({ request }) {
+  // get the selected breed from the form
+  const formData = await request.formData();
+  // Object.fromEntries is needed to get the data as an object
+  const data = Object.fromEntries(formData);
+  // redirect to the breed details page with the breed selected
+  return redirect(`/breed/${data.breed}`);
 }
 
 export async function loader() {
@@ -50,17 +70,10 @@ export async function loader() {
     return treatedBreed;
   });
 
-  // get the first 10 breeds ID, Name, and image
-  // get the list of IDs of the most popular breeds
+  // get the first 4 breeds ID, Name, and image
   const list = store.getState().mostSearched.mostSearchedList;
-  // filter the breeds infor based on that id
   const top = treetedData.filter(item => list.includes(item.id));
 
-  // Add the treated options to the store
-  store.dispatch(searchoptionsLoaded(treetedData));
-
-  // Add most searched breeds to the store
   store.dispatch(mostSearchedLoaded(top));
-
   return treetedData;
 }
