@@ -15,18 +15,21 @@ export default function MostSearhcedHomePage() {
   const fourMostSearchedBreeds = mostSearchedBreeds.slice(0, 4);
 
   return (
-    <div className={styles.mostSearchedContianer}>
-      <h3 className={styles.mostSearchedHomeHeader}>Most Searched Breeds</h3>
+    <div className={styles.container}>
+      <h3 className={styles.headingSecondary}>Most Searched Breeds</h3>
+      <span className={styles.underline}></span>
 
       <Link to="/most-searched" className={styles.headingLink}>
-        <h2 className={styles.mostSearchedHomeHeading}>
+        <h2 className={styles.headingPrimary}>
           66+ Breeds For you <br /> to discover
         </h2>
       </Link>
-      <div className={styles.mostSearchedHomeContianer}>
+      <div className={styles.breedContainer}>
         {/* then show rendrer a sepritae element for each breed */}
-        {fourMostSearchedBreeds.map(breed => {
-          return <MostSearchedHomeElement breed={breed} key={breed.id} />;
+        {fourMostSearchedBreeds.map((breed, i) => {
+          return (
+            <MostSearchedHomeElement index={i} breed={breed} key={breed.id} />
+          );
         })}
       </div>
     </div>

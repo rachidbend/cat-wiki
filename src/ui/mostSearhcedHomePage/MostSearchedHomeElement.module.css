@@ -1,18 +1,19 @@
-.topSearchedHomeLink {
+.link {
   text-decoration: none;
-  margin-bottom: 1.9rem;
+  margin-bottom: 0.5rem;
   /* box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.1); */
 }
 
-.topSearchedHomeImage {
-  width: 13.477rem;
-  height: 13.477rem;
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 1.2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.16rem;
 }
 
-.topSearchedHomeName {
+.name {
   color: #291507;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
@@ -20,4 +21,6 @@
   font-weight: 600;
   line-height: normal;
   text-decoration: none;
+}
+.firstLinkImg {
 }
