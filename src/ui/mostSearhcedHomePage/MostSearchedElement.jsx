@@ -26,9 +26,8 @@ export default function MostSearchedElement({ breed, index }) {
           {index + 1}. {breed.name}
         </h3>
       </Link>
-      <div>
-        <img className={styles.img} src={imgUrl} alt="" />
-      </div>
+
+      <img className={styles.img} src={imgUrl} alt="" />
 
       <p className={styles.description}>{breed.description}</p>
     </div>

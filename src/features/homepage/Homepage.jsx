@@ -6,7 +6,10 @@ import { searchoptionsLoaded } from '../search/searchSlice';
 import store from '../../store';
 import { mostSearchedLoaded } from '../mostSearched/mostSearchedSlice';
 import MostSearhcedHomePage from '../../ui/mostSearhcedHomePage/MostSearhcedHomePage';
+<<<<<<< HEAD
 import ArticleComponent from '../article/ArticleComponent';
+=======
+>>>>>>> develop
 
 export default function Homepage() {
   const allBreeds = useLoaderData();
@@ -41,7 +44,6 @@ export default function Homepage() {
         </Form>
       </div>
       <MostSearhcedHomePage />
-      <ArticleComponent />
     </>
   );
 }
