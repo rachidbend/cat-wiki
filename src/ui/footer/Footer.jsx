@@ -7,8 +7,10 @@ export default function Footer() {
       <Link to={'/'}>
         <img className={styles.logo} src={logo} alt="Cat Wiki Logo" />
       </Link>
-      <p>
-        created by <span>usernae</span> - devChallenge.io 2021
+      <p className={styles.paragraph}>
+        <span className={styles.copy}>&copy;</span> created by{' '}
+        <span className={styles.username}> username </span> - devChallenge.io
+        2021
       </p>
     </footer>
   );

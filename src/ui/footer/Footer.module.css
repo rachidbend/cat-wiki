@@ -4,10 +4,36 @@
   border-top-right-radius: 4.2rem;
   color: #fff;
   padding: 3rem 1.7rem;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
 }
 
 .logo {
   outline: #fff;
+  padding-right: 1.4rem;
+  height: 2.5rem;
+  width: auto;
+}
+.paragraph {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+.paragraph span {
+  font-weight: 700;
+}
+.copy {
+  color: #fff;
+  margin-right: 0.7rem;
+  font-family: Montserrat;
+  font-size: 2.4rem;
+
+  font-weight: 400;
+}
+.username {
 }

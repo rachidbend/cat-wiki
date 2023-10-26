@@ -28,5 +28,3 @@ const mostSearchedSlice = createSlice({
 
 export default mostSearchedSlice.reducer;
 export const { mostSearchedLoaded } = mostSearchedSlice.actions;
-
-// 'ragd', 'mcoo', 'esho' , 'pers', 'drex', 'bsho', 'abys', 'asho', 'sfol', 'sphy'

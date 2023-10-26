@@ -31,7 +31,6 @@ function filterOptions(query, allBreeds) {
 export default function Search() {
   // This state is used to keep track of the query
   const [query, setQuery] = useState('');
-  const [openOptions, setOpenOptions] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(function () {}, []);
@@ -96,7 +95,7 @@ export default function Search() {
           </div>
         ) : null}
       </Form>
-      {/* instead of changing the styling of the search component when it is open, this FORM is used instead with some modifications to it */}
+      {/* Instead of changing the styling of the search component when it is open, this FORM is used instead with some modifications to it */}
       {query !== '' || isSearchOpen === true ? (
         <Form autoComplete="off" method="POST" className={styles.formMobile}>
           <div className={styles.containeMobiler}>
