@@ -106,11 +106,13 @@ export default function Search() {
               </span>
             </div>
             <div className={styles.inputContainerMobile}>
-              <img
-                src={iconSearch}
-                className={styles.iconSearchMobile}
-                alt="Search icon"
-              />
+              <button className={styles.submitButton} type="submit">
+                <img
+                  src={iconSearch}
+                  className={styles.iconSearchMobile}
+                  alt="Search icon"
+                />
+              </button>
               <input
                 onChange={handleSearchChange}
                 value={query}
