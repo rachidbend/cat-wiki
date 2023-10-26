@@ -1,0 +1,158 @@
+.search {
+  padding: 2.6rem 1.9rem;
+  /* padding-bottom: 2.6rem; */
+  background-image: url('./../../assets/HeroImagesm.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-right-radius: 2.4rem;
+  border-top-left-radius: 2.4rem;
+  /* position: relative; */
+  margin-top: 2.4rem;
+}
+
+.search h2 {
+  font-family: 'Mystery Quest', sans-serif;
+  margin-bottom: 0.73rem;
+  color: #fff;
+
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0.73rem;
+}
+
+.search p {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 1.82rem;
+  line-height: normal;
+}
+
+.searchOptionsContainer {
+  color: #000;
+  background-color: #fff;
+  height: 8rem;
+  overflow: scroll;
+}
+
+.searchOptionsContainer {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 16rem;
+}
+.searchOptionsContainer ul {
+}
+.searchOptionsContainer li {
+}
+
+.form {
+  position: relative;
+}
+
+.searchInput {
+  width: 9.1621rem;
+  padding: 0.72rem 1.3rem 0.85rem 1.3rem;
+  border-radius: 5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #291507;
+  font-size: 1.2rem;
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+.iconSearch {
+  position: absolute;
+  left: 6.6rem;
+  height: 1.5rem;
+  width: auto;
+  top: 0.72rem;
+}
+
+/**************************
+**** Search Mobile View ***
+***************************/
+.formMobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  height: 100vh;
+  overflow: scroll;
+}
+.inputContainerMobile {
+  position: relative;
+}
+
+.searchOptionsContainerMobile {
+  padding: 14rem 1.8rem 3rem 1.8rem;
+}
+.searchOptionsContainerMobile li {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  padding: 2.14rem 0.92rem;
+  font-weight: 500;
+  list-style: none;
+}
+.iconSearchMobile {
+  height: 2.4rem;
+}
+.submitButton {
+  height: 2.4rem;
+  position: absolute;
+  top: 1.08rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+.searchInputMobile {
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  color: #291507;
+  padding: 1.18rem 5rem 1.18rem 2rem;
+  border: 0.1rem solid #291507;
+  border-radius: 5rem;
+  width: 100%;
+}
+
+.iconCloseContainer {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 3rem;
+}
+.iconClose {
+  height: 4rem;
+  width: 4rem;
+  background-color: hsla(0, 0%, 59%, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+}
+
+.containeMobiler {
+  position: fixed;
+  width: 100%;
+  padding: 0.7rem 1.8rem 3rem 1.8rem;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .formMobile {
+    display: none;
+  }
+}
