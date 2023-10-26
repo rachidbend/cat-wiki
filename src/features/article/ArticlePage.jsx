@@ -1,8 +1,11 @@
 import styles from './ArticlePage.module.css';
+
+//  A simple component to show an article, no need for any data fetching for this one
 export default function ArticlePage() {
   return (
     <div className={styles.article}>
       <h1 className={styles.headingPrimary}>Why Should you have a cat?</h1>
+
       <p className={styles.paragraph}>
         Owning a cat is a rewarding experience, as they provide both comfort and
         playful companionship. Cats are independent yet affectionate with their
@@ -100,6 +103,7 @@ export default function ArticlePage() {
           </p>
         </li>
       </ul>
+      {/* directs to the source of the article */}
       <a
         target="_blank"
         rel="noreferrer"
