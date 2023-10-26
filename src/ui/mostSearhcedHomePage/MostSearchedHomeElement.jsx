@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styles from './MostSearchedHomeElement.module.css';
 import { getImageLink } from '../../helpers';
 
-export default function MostSearchedHomeElement({ breed }) {
+export default function MostSearchedHomeElement({ breed, index }) {
   // using the state to cause a rerendre when this element gets the image URL
   const [imgUrl, setImgUrl] = useState('');
   // this effect is used to get the image URL of the breed it was given
@@ -28,12 +28,18 @@ export default function MostSearchedHomeElement({ breed }) {
   return (
     <Link
       to={`/breed/${breed.id}`}
-      className={styles.topSearchedHomeLink}
+      className={styles.link}
       key={`mostSearched_${breed.id}`}
     >
       <div>
-        <img className={styles.topSearchedHomeImage} src={imgUrl} alt="" />
-        <p className={styles.topSearchedHomeName}>{breed.name}</p>
+        <img
+          className={`${styles.image} ${
+            index === 0 ? styles.firstLinkImg : ''
+          }`}
+          src={imgUrl}
+          alt=""
+        />
+        <p className={styles.name}>{breed.name}</p>
       </div>
     </Link>
   );
