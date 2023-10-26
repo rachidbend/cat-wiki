@@ -3,13 +3,9 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MostSearchedHomeElement.module.css';
 
-<<<<<<< HEAD
 export default function MostSearchedHomeElement({ breed, index }) {
   // using the state to cause a rerendre when this element gets the image URL
 
-=======
-export default function MostSearchedHomeElement({ breed }) {
->>>>>>> develop
   const [imgUrl, setImgUrl] = useState('');
   useEffect(
     function () {

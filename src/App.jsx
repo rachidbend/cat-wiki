@@ -8,10 +8,9 @@ import { action as searchAction } from './features/homepage/Homepage';
 import BreedPage from './features/detailsPage/BreedPage';
 import { loader as breedLoader } from './features/detailsPage/BreedPage';
 import MostSearchedPage from './ui/mostSearhcedHomePage/MostSearchedPage';
-<<<<<<< HEAD
+
 import ArticlePage from './features/article/ArticlePage';
-=======
->>>>>>> develop
+import ArticleComponent from './features/article/ArticleComponent';
 
 function App() {
   const router = createBrowserRouter([
@@ -32,15 +31,12 @@ function App() {
         },
         {
           path: '/article',
-          element: <div>show some articles</div>,
+          element: <ArticleComponent />,
         },
         {
           path: '/article/why-you-should-have-a-cat',
-<<<<<<< HEAD
+
           element: <ArticlePage />,
-=======
-          element: <div>why you should have a cat</div>,
->>>>>>> develop
         },
         {
           path: '/breed/:id',
