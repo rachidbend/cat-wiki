@@ -4,8 +4,8 @@ import styles from './Header.module.css';
 export default function Header() {
   return (
     <header className={`${styles.header}`}>
-      <Link to={'/'}>
-        <img src={logo} alt="Cat Wiki Logo" />
+      <Link className={styles.headerLink} to={'/'}>
+        <img className={styles.headerImg} src={logo} alt="Cat Wiki Logo" />
       </Link>
     </header>
   );

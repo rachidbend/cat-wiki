@@ -8,9 +8,11 @@ export default function Footer() {
         <img className={styles.logo} src={logo} alt="Cat Wiki Logo" />
       </Link>
       <p className={styles.paragraph}>
-        <span className={styles.copy}>&copy;</span> created by{' '}
-        <span className={styles.username}> username </span> - devChallenge.io
-        2021
+        <span className={styles.copy}>&copy;</span> created by
+        <a className={styles.username} href="#">
+          rachidbend
+        </a>
+        - devChallenge.io 2021
       </p>
     </footer>
   );

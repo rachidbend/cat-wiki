@@ -17,7 +17,7 @@
 }
 .paragraph {
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+
   font-family: Montserrat;
   font-size: 1.2rem;
   display: flex;
@@ -36,4 +36,7 @@
   font-weight: 400;
 }
 .username {
+  color: #fff;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
 }

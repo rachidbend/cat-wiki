@@ -1,2 +1,13 @@
 .header {
+  /* these values come from the design */
+  width: 12.7724rem;
+  height: 4.3669rem;
+}
+.headerLink {
+  display: inline-block;
+  height: 100%;
+}
+.headerImg {
+  width: 100%;
+  height: auto;
 }
