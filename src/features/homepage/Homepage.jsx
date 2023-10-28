@@ -8,6 +8,7 @@ import { mostSearchedLoaded } from '../mostSearched/mostSearchedSlice';
 import MostSearhcedHomePage from '../../ui/mostSearhcedHomePage/MostSearhcedHomePage';
 import ArticleComponent from '../article/ArticleComponent';
 import Search from '../search/Search';
+import Loader from '../../ui/loader/loader';
 
 export default function Homepage() {
   // get all of the available breeds data, to show them as options
