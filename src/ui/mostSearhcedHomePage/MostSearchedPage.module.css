@@ -1,12 +1,8 @@
 .heading {
-  color: #291507;
-
-  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  color: #291507;
+  text-transform: capitalize;
   margin-bottom: 3.4rem;
   margin-top: 2.4rem;
-  text-transform: capitalize;
 }

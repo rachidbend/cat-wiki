@@ -1,7 +1,7 @@
 import { Form, redirect } from 'react-router-dom';
 import styles from './Search.module.css';
 import { useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import store from '../../store';
 import iconSearch from '../../assets/icon-search.svg';
 
@@ -22,7 +22,8 @@ function filterOptions(query, allBreeds) {
       if (splitedBreedName.includes(letter)) return true;
       else return false;
     });
-    // if a breed name includes all the letters in the query, return its details
+    // if a breed name includes ALL the letters in the query, return its details
+    // chechIfTrue is needed for .every() to work, because it takes a callback function and not an array
     if (letterIsIncluded.every(checkIfTrue)) return breed;
   });
   return filteredBreeds;
@@ -31,9 +32,8 @@ function filterOptions(query, allBreeds) {
 export default function Search() {
   // This state is used to keep track of the query
   const [query, setQuery] = useState('');
+  // and if the search overlay should be shown or not
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  useEffect(function () {}, []);
 
   // Get the list of all available breeds
   const allBreeds = useSelector(state => state.search.searchOptions);

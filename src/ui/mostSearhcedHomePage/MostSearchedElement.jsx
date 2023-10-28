@@ -24,7 +24,7 @@ export default function MostSearchedElement({ breed, index }) {
 
   // if there is no image URL don't display anything
   if (imgUrl === '') return;
-  // display the breed element
+  // else, display the breed element
   return (
     <div className={styles.container}>
       <Link className={styles.link} to={`/breed/${breed.id}`}>
@@ -32,8 +32,13 @@ export default function MostSearchedElement({ breed, index }) {
           {index + 1}. {breed.name}
         </h3>
       </Link>
-      <div>
-        <img className={styles.img} src={imgUrl} alt="" />
+      <div className={styles.imgContainer}>
+        {index === 0 ? <span className={styles.span}></span> : ''}
+        <img
+          className={styles.img}
+          src={imgUrl}
+          alt={`image of a cat of a breed called ${breed.name}`}
+        />
       </div>
 
       <p className={styles.description}>{breed.description}</p>

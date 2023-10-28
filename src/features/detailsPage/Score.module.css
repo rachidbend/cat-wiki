@@ -1,16 +1,15 @@
 .scoreContainer {
   display: flex;
-
-  gap: 0.4rem;
+  gap: 1rem;
 }
 .score {
   display: inline-block;
   width: 100%;
   height: 1rem;
   border-radius: 0.6rem;
-  background: #e0e0e0;
+  background: var(--color-gray);
 }
 
 .scoreActive {
-  background: #544439;
+  background: var(--color-light-brown);
 }

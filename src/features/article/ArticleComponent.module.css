@@ -1,59 +1,51 @@
-.span {
+.decoration {
+  display: inline-block;
   width: 5rem;
   height: 0.3rem;
-  background-color: #291507;
-  border-radius: 7.7rem;
-  display: inline-block;
 
+  background-color: var(--color-brown);
+  border-radius: 7.7rem;
   margin-bottom: 1.62rem;
 }
 
 .heading {
-  color: #291507;
-
-  font-family: 'Montserrat', sans-serif;
-
   font-size: 4rem;
-
   font-weight: 700;
-
+  color: var(--color-brown);
   margin-bottom: 4.28rem;
 }
 .description {
-  color: #291507;
-
-  font-family: 'Montserrat', sans-serif;
-
   font-size: 1.8rem;
-
   font-weight: 500;
-
+  color: var(--color-brown);
   margin-bottom: 2.7rem;
 }
 .link {
-  color: rgba(41, 21, 7, 0.6);
-  display: inline-block;
-
-  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 
   font-size: 1.2rem;
-
   font-weight: 700;
+  color: var(--color-faded-brown);
 
   text-transform: uppercase;
   margin-bottom: 6rem;
+  text-decoration: none;
+}
+.linkArrow {
+  font-size: 1.6rem;
 }
 
 .imgContainer {
   display: grid;
   /* these values are based on the percentages of the design */
-  grid-template-columns: 50.7457227% 44.2433628%;
+  grid-template-columns: 50.74% 44.24%;
   /* this allows for fliud heights */
   grid-template-rows: auto auto;
-
   gap: 1.7rem;
-
   height: auto;
+
   margin-bottom: 2.23rem;
 }
 .catImg {
@@ -64,7 +56,7 @@
 .oddImg {
   display: inline-block;
   /* this value is based on the design, to make sure it has a concistent look */
-  width: 71.4720859%;
+  width: 71.47%;
   height: auto;
   justify-self: end;
 }
