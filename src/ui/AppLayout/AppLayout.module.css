@@ -1,4 +1,11 @@
 .appLayout {
   padding: 1.28rem 1.8rem;
   padding-bottom: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
 }
