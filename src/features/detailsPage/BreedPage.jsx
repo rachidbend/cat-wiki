@@ -25,86 +25,87 @@ export default function BreedPage() {
 
   return (
     <div className={styles.breedPageContainer}>
-      <h2 className={styles.breedName}>{breedDetails.name}</h2>
-      <div className={styles.imgContainer}>
-        <span className={styles.span}></span>
-        <img
-          className={styles.breedImage}
-          src={breedImage.url}
-          alt={breedDetails.name}
-        />
-      </div>
+      <div>
+        <h2 className={styles.breedName}>{breedDetails.name}</h2>
+        <div className={styles.imgContainer}>
+          <span className={styles.span}></span>
+          <img
+            className={styles.breedImage}
+            src={breedImage.url}
+            alt={breedDetails.name}
+          />
+        </div>
 
-      <div className={styles.details}>
-        <p className={styles.description}>{breedDetails.description}</p>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span>Temperament:</span>
-            {breedDetails.temperament}.
-          </p>
-        </div>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span>Origin:</span>
-            {breedDetails.origin}
-          </p>
-        </div>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span>Life span:</span>
-            {breedDetails.life_span} years
-          </p>
-        </div>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span>Adaptability:</span>
-          </p>
-          <Score score={breedDetails.adaptability} />
-        </div>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span>Affection level:</span>
-          </p>
-          <Score score={breedDetails.affection_level} />
-        </div>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span>Child friendly:</span>
-          </p>
-          <Score score={breedDetails.child_friendly} />
-        </div>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span>Grooming:</span>
-          </p>
-          <Score score={breedDetails.grooming} />
-        </div>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span>Intelligence:</span>
-          </p>
-          <Score score={breedDetails.intelligence} />
-        </div>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span> Health issues:</span>
-          </p>
-          <Score score={breedDetails.health_issues} />
-        </div>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span>Social needs:</span>
-          </p>
-          <Score score={breedDetails.social_needs} />
-        </div>
-        <div className={styles.statContianer}>
-          <p className={`${styles.stat}`}>
-            <span>Stranger friendly:</span>
-          </p>
-          <Score score={breedDetails.stranger_friendly} />
+        <div className={styles.details}>
+          <p className={styles.description}>{breedDetails.description}</p>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span>Temperament:</span>
+              {breedDetails.temperament}.
+            </p>
+          </div>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span>Origin:</span>
+              {breedDetails.origin}
+            </p>
+          </div>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span>Life span:</span>
+              {breedDetails.life_span} years
+            </p>
+          </div>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span>Adaptability:</span>
+            </p>
+            <Score score={breedDetails.adaptability} />
+          </div>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span>Affection level:</span>
+            </p>
+            <Score score={breedDetails.affection_level} />
+          </div>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span>Child friendly:</span>
+            </p>
+            <Score score={breedDetails.child_friendly} />
+          </div>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span>Grooming:</span>
+            </p>
+            <Score score={breedDetails.grooming} />
+          </div>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span>Intelligence:</span>
+            </p>
+            <Score score={breedDetails.intelligence} />
+          </div>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span> Health issues:</span>
+            </p>
+            <Score score={breedDetails.health_issues} />
+          </div>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span>Social needs:</span>
+            </p>
+            <Score score={breedDetails.social_needs} />
+          </div>
+          <div className={styles.statContianer}>
+            <p className={`${styles.stat}`}>
+              <span>Stranger friendly:</span>
+            </p>
+            <Score score={breedDetails.stranger_friendly} />
+          </div>
         </div>
       </div>
-
       <h2 className={styles.heading}>Other images</h2>
       <div className={styles.otherImageContainer}>
         {otherBreedImages.map(image => (

@@ -64,8 +64,8 @@ export default function Search() {
 
   return (
     <div className={`${styles.search}`}>
-      <h2>catwiki</h2>
-      <p>
+      <h2 className={styles.logoHeading}>catwiki</h2>
+      <p className={styles.description}>
         Get to know more about <br /> your cat breed
       </p>
       <Form autoComplete="off" method="POST" className={styles.form}>

@@ -45,3 +45,14 @@
   background-color: var(--color-pale-yellow);
   z-index: -1;
 }
+
+/* tablet view: between 600px and 900px */
+@media screen and (min-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+  }
+  .img {
+    grid-column: 1 2;
+  }
+}
