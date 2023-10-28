@@ -32,13 +32,11 @@ export default function MostSearchedHomeElement({ breed, index }) {
       key={`mostSearched_${breed.id}`}
     >
       <div>
-        <img
-          className={`${styles.image} ${
-            index === 0 ? styles.firstLinkImg : ''
-          }`}
-          src={imgUrl}
-          alt=""
-        />
+        <div className={styles.imgContainer}>
+          {index === 0 ? <span className={styles.firstLinkImgSpan}></span> : ''}
+
+          <img className={`${styles.image}`} src={imgUrl} alt="" />
+        </div>
         <p className={styles.name}>{breed.name}</p>
       </div>
     </Link>

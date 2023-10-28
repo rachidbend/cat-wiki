@@ -1,42 +1,36 @@
 .footer {
-  background-color: hsla(0, 0%, 0%, 1);
-  border-top-left-radius: 4.2rem;
-  border-top-right-radius: 4.2rem;
-  color: #fff;
-  padding: 3rem 1.7rem;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* align-items: center; */
+  color: var(--color-white);
+  background-color: var(--color-black);
+
+  padding: 3rem 1.7rem 3rem 2.9rem;
+  border-radius: 4.2rem 4.2rem 0 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  outline: #fff;
-  padding-right: 1.4rem;
   height: 2.5rem;
   width: auto;
+  outline: var(--color-white);
+  padding-right: 1.4rem;
 }
 .paragraph {
-  color: #fff;
-
-  font-family: Montserrat;
+  color: var(--color-white);
   font-size: 1.2rem;
-  display: flex;
-  align-items: center;
   font-weight: 400;
 }
-.paragraph span {
-  font-weight: 700;
-}
-.copy {
-  color: #fff;
-  margin-right: 0.7rem;
-  font-family: Montserrat;
-  font-size: 2.4rem;
 
+.copy {
+  color: var(--color-white);
+  margin-right: 0.7rem;
+  font-size: 2.4rem;
   font-weight: 400;
 }
 .username {
-  color: #fff;
-  margin-left: 0.4rem;
-  margin-right: 0.4rem;
+  color: var(--color-white);
+  font-weight: 600;
+  margin: 0 0.3rem;
 }
