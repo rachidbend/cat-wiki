@@ -7,20 +7,14 @@ import ImageLoader from './../loader/ImageLoader';
 export default function MostSearchedHomeElement({ breed, index }) {
   // using the state to cause a rerendre when this element gets the image URL
   const [imgUrl, setImgUrl] = useState('');
-  const [isLoading, setIsloading] = useState(false);
   // this effect is used to get the image URL of the breed it was given
 
   useEffect(
     function () {
-      setIsloading(isLoading => true);
       async function getImgUrl() {
-        console.log(isLoading + ' after true');
-
         // no need to re fetch if there is an image URL
         if (imgUrl !== '') return;
-        const img = await getImageLink(breed.imageId, setIsloading);
-        setIsloading(isLoading => false);
-        console.log(isLoading + ' after false');
+        const img = await getImageLink(breed.imageId);
         setImgUrl(img);
       }
       getImgUrl();
@@ -41,11 +35,8 @@ export default function MostSearchedHomeElement({ breed, index }) {
       <div>
         <div className={styles.imgContainer}>
           {index === 0 ? <span className={styles.firstLinkImgSpan}></span> : ''}
-          {isLoading ? (
-            <ImageLoader />
-          ) : (
-            <img className={`${styles.image}`} src={imgUrl} alt="" />
-          )}
+
+          <img className={`${styles.image}`} src={imgUrl} alt="" />
         </div>
         <p className={styles.name}>{breed.name}</p>
       </div>
