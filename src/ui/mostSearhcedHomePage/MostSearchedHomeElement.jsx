@@ -9,7 +9,7 @@ export default function MostSearchedHomeElement({ breed, index }) {
   const [imgUrl, setImgUrl] = useState('');
   const [isLoading, setIsloading] = useState(false);
   // this effect is used to get the image URL of the breed it was given
-  console.log(isLoading);
+
   useEffect(
     function () {
       async function getImgUrl() {
@@ -17,10 +17,13 @@ export default function MostSearchedHomeElement({ breed, index }) {
         // no need to re fetch if there is an image URL
         if (imgUrl !== '') return;
         const img = await getImageLink(breed.imageId);
-        setImgUrl(img);
         setIsloading(false);
+        console.log(isLoading + ' inside');
+        setImgUrl(img);
       }
       getImgUrl();
+      setIsloading(false);
+      console.log(isLoading + ' outside');
     },
     [breed.imageId, imgUrl]
   );
