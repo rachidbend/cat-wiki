@@ -9,8 +9,13 @@ export default function Footer() {
       </Link>
       <p className={styles.paragraph}>
         <span className={styles.copy}>&copy;</span> created by
-        <a className={styles.username} href="#">
-          rachidbend
+        <a
+          className={styles.username}
+          href="https://legacy.devchallenges.io/portfolio/rachidbend"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Rachid
         </a>
         - devChallenge.io 2021
       </p>
