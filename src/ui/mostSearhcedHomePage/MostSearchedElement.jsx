@@ -14,13 +14,13 @@ export default function MostSearchedElement({ breed, index }) {
   // this effect is used to get the image URL of the breed it was given
   useEffect(
     function () {
+      setIsloading(isLoading => true);
       async function getImgUrl() {
-        setIsloading(true);
         // no need to re fetch if there is an image URL
         if (imgUrl !== '') return;
         const img = await getImageLink(breed.imageId);
         setImgUrl(img);
-        setIsloading(false);
+        setIsloading(isLoading => false);
       }
       getImgUrl();
     },

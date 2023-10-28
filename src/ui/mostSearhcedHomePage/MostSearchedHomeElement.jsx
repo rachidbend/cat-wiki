@@ -12,18 +12,18 @@ export default function MostSearchedHomeElement({ breed, index }) {
 
   useEffect(
     function () {
+      setIsloading(isLoading => true);
       async function getImgUrl() {
-        setIsloading(true);
+        console.log(isLoading + ' after true');
+
         // no need to re fetch if there is an image URL
         if (imgUrl !== '') return;
-        const img = await getImageLink(breed.imageId);
-        setIsloading(false);
-        console.log(isLoading + ' inside');
+        const img = await getImageLink(breed.imageId, setIsloading);
+        setIsloading(isLoading => false);
+        console.log(isLoading + ' after false');
         setImgUrl(img);
       }
       getImgUrl();
-      setIsloading(false);
-      console.log(isLoading + ' outside');
     },
     [breed.imageId, imgUrl]
   );
