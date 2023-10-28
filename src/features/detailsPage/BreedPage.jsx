@@ -15,8 +15,7 @@ export default function BreedPage() {
   const { breedDetails, breedImage, otherBreedImages } = useSelector(
     state => state.breed
   );
-  console.log(breedDetails);
-  console.log(breedImage);
+
   // check if they exist, and if not, return without rendering anything
   if (
     !Object.keys(breedDetails)?.length === 0 &&

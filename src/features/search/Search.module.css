@@ -73,6 +73,7 @@
   background-color: var(--color-white);
   height: 100vh;
   overflow: scroll;
+  z-index: 999;
 }
 .inputContainerMobile {
   position: relative;
