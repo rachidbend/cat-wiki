@@ -25,8 +25,8 @@ export default function BreedPage() {
 
   return (
     <div className={styles.breedPageContainer}>
-      <div>
-        <h2 className={styles.breedName}>{breedDetails.name}</h2>
+      <h2 className={styles.breedName}>{breedDetails.name}</h2>
+      <div className={styles.detailsContainer}>
         <div className={styles.imgContainer}>
           <span className={styles.span}></span>
           <img
@@ -37,6 +37,7 @@ export default function BreedPage() {
         </div>
 
         <div className={styles.details}>
+          <h2 className={styles.breedName}>{breedDetails.name}</h2>
           <p className={styles.description}>{breedDetails.description}</p>
           <div className={styles.statContianer}>
             <p className={`${styles.stat}`}>
@@ -151,7 +152,9 @@ export async function loader({ params }) {
   const otherImagesRes = await fetch(
     `https://api.thecatapi.com/v1/images/search?limit=8&breed_ids=${id}`
   );
-  const otherImagesData = await otherImagesRes.json();
+  const data = await otherImagesRes.json();
+  // getting only the first 8 images
+  const otherImagesData = data.slice(0, 8);
 
   // add the referance image to the store
   store.dispatch(breedImageLoaded(refrenceImageData));
