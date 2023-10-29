@@ -9,3 +9,10 @@
 
 .main {
 }
+
+@media screen and (min-width: 600px) {
+  .appLayout {
+    padding: 1.6rem 4rem;
+    padding-bottom: 0;
+  }
+}

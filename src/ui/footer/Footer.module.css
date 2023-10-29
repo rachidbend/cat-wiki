@@ -34,3 +34,19 @@
   font-weight: 600;
   margin: 0 0.3rem;
 }
+
+/* tablet view: between 600px and 900px */
+@media screen and (min-width: 600px) {
+  .footer {
+    padding: 3rem 2rem 3rem 4.4rem;
+  }
+  .logo {
+    height: 3rem;
+  }
+  .paragraph {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+}
