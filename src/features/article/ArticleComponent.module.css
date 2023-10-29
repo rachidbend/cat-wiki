@@ -1,3 +1,5 @@
+.articleComponent {
+}
 .decoration {
   display: inline-block;
   width: 5rem;
@@ -24,13 +26,13 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
-
+  margin-bottom: 6rem;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-faded-brown);
 
   text-transform: uppercase;
-  margin-bottom: 6rem;
+
   text-decoration: none;
 }
 .linkArrow {
@@ -67,4 +69,32 @@
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
+}
+
+/* tablet view: between 600px and 900px */
+@media screen and (min-width: 600px) {
+  .articleComponent {
+    display: grid;
+    grid-template-columns: 1fr 42%;
+    grid-template-rows: auto;
+    padding: 0 4rem;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3.6rem;
+  }
+  .imgContainer {
+    justify-self: start;
+    align-self: start;
+  }
+  .heading {
+    font-size: 3.4rem;
+    margin-bottom: 2.6rem;
+  }
+  .description {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .link {
+    margin-bottom: 0rem;
+  }
 }

@@ -6,7 +6,7 @@
   font-weight: 700;
 
   color: var(--color-brown);
-  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
 }
 
 .headingSecondary {
@@ -23,7 +23,7 @@
   line-height: 1.3;
 
   color: var(--color-brown);
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.2rem;
 }
 .listItem strong {
   color: var(--color-brown);
@@ -44,4 +44,26 @@
   font-weight: 600;
   color: var(--color-brown);
   margin-bottom: 3rem;
+}
+
+/* tablet view: between 600px and 900px */
+@media screen and (min-width: 600px) {
+  .headingPrimary {
+    font-size: 2.4rem;
+
+    margin-bottom: 3.6rem;
+  }
+  .headingSecondary {
+    font-size: 2rem;
+    margin-bottom: 2.4rem;
+  }
+  .paragraph {
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+  }
+  .listItem {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
 }

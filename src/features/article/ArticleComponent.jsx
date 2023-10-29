@@ -7,17 +7,18 @@ import img3 from './../../assets/image-3.png';
 
 export default function ArticleComponent() {
   return (
-    <div>
-      <span className={styles.decoration}></span>
-      <h2 className={styles.heading}>Why should you have a cat?</h2>
-      <p className={styles.description}>
-        having a cat around you can actually trigger the release of calming
-        chemicals in your body which lowers your stress and anxiety levels.
-      </p>
-      <Link className={styles.link} to="/articles/why-you-should-have-a-cat">
-        Read More <span className={styles.linkArrow}> &rarr;</span>
-      </Link>
-
+    <div className={styles.articleComponent}>
+      <div className={styles.contentContainer}>
+        <span className={styles.decoration}></span>
+        <h2 className={styles.heading}>Why should you have a cat?</h2>
+        <p className={styles.description}>
+          having a cat around you can actually trigger the release of calming
+          chemicals in your body which lowers your stress and anxiety levels.
+        </p>
+        <Link className={styles.link} to="/articles/why-you-should-have-a-cat">
+          Read More <span className={styles.linkArrow}> &rarr;</span>
+        </Link>
+      </div>
       <div className={styles.imgContainer}>
         <img className={styles.catImg} src={img2} alt="cat image" />
         <img
