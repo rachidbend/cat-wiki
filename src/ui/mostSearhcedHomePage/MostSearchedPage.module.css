@@ -1,8 +1,21 @@
 .heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #291507;
+  color: var(--color-brown);
   text-transform: capitalize;
   margin-bottom: 3.4rem;
   margin-top: 2.4rem;
+}
+
+/* tablet landscape view: between 900px and 1200px */
+@media screen and (min-width: 900px) {
+  .heading {
+    font-size: 3rem;
+    margin-bottom: 4.8rem;
+    margin-top: 3.6rem;
+  }
+  .page {
+    padding: 0 2.4rem;
+    margin-bottom: 8.4rem;
+  }
 }

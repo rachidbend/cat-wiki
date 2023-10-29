@@ -11,7 +11,7 @@ export default function MostSearchedPage() {
   );
 
   return (
-    <div>
+    <div className={styles.page}>
       <h2 className={styles.heading}>Top 10 most searched breeds</h2>
       <div>
         {/* then render them one by one using this component */}

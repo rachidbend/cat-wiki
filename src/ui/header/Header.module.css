@@ -11,3 +11,15 @@
   width: 100%;
   height: auto;
 }
+
+/* tablet landscape view: between 900px and 1200px */
+@media screen and (min-width: 900px) {
+  .header {
+    /* these values come from the design */
+    width: 14rem;
+    height: auto;
+  }
+  .headerLink {
+    width: 100%;
+  }
+}

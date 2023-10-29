@@ -5,8 +5,6 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getImageLink } from '../../helpers';
 
-import ImageLoader from '../loader/ImageLoader';
-
 export default function MostSearchedElement({ breed, index }) {
   // using the state to cause a rerendre when this element gets the image URL
   const [imgUrl, setImgUrl] = useState('');

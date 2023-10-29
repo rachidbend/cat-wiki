@@ -57,49 +57,49 @@ export default function BreedPage() {
               {breedDetails.life_span} years
             </p>
           </div>
-          <div className={styles.statContianer}>
+          <div className={`${styles.statContianer} ${styles.statScore}`}>
             <p className={`${styles.stat}`}>
               <span>Adaptability:</span>
             </p>
             <Score score={breedDetails.adaptability} />
           </div>
-          <div className={styles.statContianer}>
+          <div className={`${styles.statContianer} ${styles.statScore}`}>
             <p className={`${styles.stat}`}>
               <span>Affection level:</span>
             </p>
             <Score score={breedDetails.affection_level} />
           </div>
-          <div className={styles.statContianer}>
+          <div className={`${styles.statContianer} ${styles.statScore}`}>
             <p className={`${styles.stat}`}>
               <span>Child friendly:</span>
             </p>
             <Score score={breedDetails.child_friendly} />
           </div>
-          <div className={styles.statContianer}>
+          <div className={`${styles.statContianer} ${styles.statScore}`}>
             <p className={`${styles.stat}`}>
               <span>Grooming:</span>
             </p>
             <Score score={breedDetails.grooming} />
           </div>
-          <div className={styles.statContianer}>
+          <div className={`${styles.statContianer} ${styles.statScore}`}>
             <p className={`${styles.stat}`}>
               <span>Intelligence:</span>
             </p>
             <Score score={breedDetails.intelligence} />
           </div>
-          <div className={styles.statContianer}>
+          <div className={`${styles.statContianer} ${styles.statScore}`}>
             <p className={`${styles.stat}`}>
               <span> Health issues:</span>
             </p>
             <Score score={breedDetails.health_issues} />
           </div>
-          <div className={styles.statContianer}>
+          <div className={`${styles.statContianer} ${styles.statScore}`}>
             <p className={`${styles.stat}`}>
               <span>Social needs:</span>
             </p>
             <Score score={breedDetails.social_needs} />
           </div>
-          <div className={styles.statContianer}>
+          <div className={`${styles.statContianer} ${styles.statScore}`}>
             <p className={`${styles.stat}`}>
               <span>Stranger friendly:</span>
             </p>
