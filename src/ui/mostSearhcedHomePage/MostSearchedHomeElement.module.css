@@ -74,3 +74,21 @@
     border-radius: 2.4rem;
   }
 }
+
+/* laptop view: between 1200px and when ever the design breaks */
+@media screen and (min-width: 1200px) {
+  .name {
+    font-size: 1.8rem;
+
+    font-weight: 600;
+  }
+  .imgContainer {
+    margin-bottom: 2rem;
+  }
+  .firstLinkImgSpan {
+    width: 1.6rem;
+    top: 15.11%;
+    height: 77%;
+    left: -1.4rem;
+  }
+}

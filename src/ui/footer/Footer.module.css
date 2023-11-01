@@ -67,12 +67,29 @@
     padding: 3rem 3rem 3rem 6rem;
   }
   .paragraph {
-    color: var(--color-white);
     font-size: 1.5rem;
     font-weight: 400;
   }
   .copy {
     margin-right: 0.8rem;
     font-size: 2.2rem;
+  }
+}
+
+/* laptop view: between 1200px and when ever the design breaks */
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding: 2.76rem 3.24rem 4.94rem 10.8rem;
+  }
+  .logo {
+    height: 4.27rem;
+  }
+  .paragraph {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .copy {
+    margin-right: 1.36rem;
+    font-size: 2.4rem;
   }
 }
