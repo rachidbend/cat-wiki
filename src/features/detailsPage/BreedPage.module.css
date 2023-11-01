@@ -164,3 +164,54 @@
     left: -1rem;
   }
 }
+
+/* laptop view: between 1200px and when ever the design breaks */
+@media screen and (min-width: 1200px) {
+  .detailsContainer {
+    grid-template-columns: 34.14rem 1fr;
+    column-gap: 11.5rem;
+  }
+  .breedName {
+    font-size: 3.6rem;
+    margin-bottom: 2.5rem;
+  }
+  .description {
+    font-size: 1.8rem;
+
+    margin-bottom: 3.27rem;
+    line-height: normal;
+  }
+  .stat {
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+  .statScore {
+    display: grid;
+    column-gap: 1.2rem;
+    grid-template-columns: 17.8rem 47.3%;
+    align-items: center;
+    margin-bottom: 3.2rem;
+  }
+  /* to make alignement easier */
+  .statScore:last-child {
+    margin-bottom: 0;
+  }
+  .statScore .stat {
+    margin-bottom: 0;
+  }
+
+  /*  */
+  .heading {
+    font-size: 3.6rem;
+    margin-bottom: 4rem;
+    margin-top: 8.02rem;
+  }
+  .otherImageContainer {
+    column-gap: 4.6rem;
+    row-gap: 5.31rem;
+  }
+  .breedPageContainer {
+    padding-bottom: 0;
+    margin-bottom: 17.7rem;
+  }
+}

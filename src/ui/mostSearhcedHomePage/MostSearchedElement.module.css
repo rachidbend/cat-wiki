@@ -90,3 +90,29 @@
     color: var(--color-brown);
   }
 }
+
+/* laptop view: between 1200px and when ever the design breaks */
+@media screen and (min-width: 1200px) {
+  .container {
+    grid-template-columns: 17rem 1fr;
+    column-gap: 4.6rem;
+    margin-bottom: 5.5rem;
+  }
+  .title {
+    font-size: 3.6rem;
+    margin-bottom: 2.4rem;
+  }
+  .description {
+    font-size: 1.8rem;
+    line-height: normal;
+  }
+  .span {
+    height: 70%;
+
+    top: 12%;
+    left: -1rem;
+  }
+}
+
+/* 110.4 */
+/* 15.4 */

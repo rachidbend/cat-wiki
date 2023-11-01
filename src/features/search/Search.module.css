@@ -257,9 +257,10 @@
     list-style: none;
     padding: 1.4rem 1.3rem;
     border-radius: 1.2rem;
+    transition: background 360ms ease-in-out;
   }
   .searchOption:hover {
-    background-color: var(--color-light-gray);
+    background-color: var(--color-dark-gray);
   }
 }
 
@@ -293,5 +294,16 @@
     width: auto;
     top: 2.28rem;
     left: 34.73rem;
+  }
+  .searchOptionsContainer {
+    top: 8.67rem;
+    width: 39rem;
+    height: 22rem;
+
+    padding: 1.13rem;
+  }
+  .searchOption {
+    font-size: 1.8rem;
+    padding: 2rem 0.92rem;
   }
 }

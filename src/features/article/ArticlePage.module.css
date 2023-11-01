@@ -67,3 +67,33 @@
     margin-bottom: 2rem;
   }
 }
+
+/* laptop view: between 1200px and when ever the design breaks */
+@media screen and (min-width: 1200px) {
+  .article {
+    margin-top: 5rem;
+    padding-right: 11rem;
+  }
+  .headingPrimary {
+    font-size: 3.6rem;
+    margin-bottom: 5.2rem;
+  }
+  .headingSecondary {
+    font-size: 3rem;
+    margin-bottom: 2.4rem;
+  }
+  .paragraph {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 2.4rem;
+  }
+  .listItem {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--color-faded-brown);
+
+    line-height: 1.5;
+    list-style: none;
+    margin-bottom: 2.4rem;
+  }
+}
