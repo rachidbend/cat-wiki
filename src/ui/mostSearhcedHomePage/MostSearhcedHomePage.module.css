@@ -88,3 +88,42 @@
     margin-bottom: 4.8rem;
   }
 }
+
+/* laptop view: between 1200px and when ever the design breaks */
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 4rem 10.7rem 9.9rem 10.8rem;
+    margin-bottom: 10rem;
+  }
+  .headingSecondary {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .underline {
+    margin-bottom: 3.6rem;
+    width: 5.9rem;
+  }
+  .headingPrimary {
+    font-size: 4.8rem;
+    margin-bottom: 0rem;
+  }
+  .breedContainer {
+    gap: 5.1rem;
+  }
+  .linkContianer {
+    margin-bottom: 4.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .linkMore {
+    color: var(--color-faded-brown);
+
+    text-align: right;
+    font-size: 1.8rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+  }
+}
