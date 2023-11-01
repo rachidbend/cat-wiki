@@ -98,3 +98,68 @@
     margin-bottom: 0rem;
   }
 }
+
+/* tablet landscape view: between 900px and 1200px */
+@media screen and (min-width: 900px) {
+  .articleComponent {
+    grid-template-columns: 1fr 50%;
+    padding: 0 6rem;
+    gap: 4rem;
+    margin-bottom: 8rem;
+  }
+  .heading {
+    font-size: 4rem;
+    margin-bottom: 3.6rem;
+  }
+  .description {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 3.6rem;
+  }
+  .decoration {
+    width: 6rem;
+    line-height: normal;
+  }
+  .link {
+    margin-bottom: 0rem;
+    font-size: 1.4rem;
+  }
+  .imgContainer {
+    gap: 2.2rem;
+    margin-bottom: 0rem;
+  }
+}
+
+/* laptop view: between 1200px and when ever the design breaks */
+@media screen and (min-width: 1200px) {
+  .articleComponent {
+    gap: 4.6rem;
+    grid-template-columns: 1fr 54.6%;
+    margin-bottom: 10.09rem;
+  }
+  .imgContainer {
+    column-gap: 2.7rem;
+    row-gap: 2.86rem;
+    margin-bottom: 0rem;
+  }
+  .decoration {
+    width: 6.72rem;
+    margin-bottom: 1.67rem;
+  }
+  .heading {
+    font-size: 4.8rem;
+    margin-bottom: 4.4rem;
+  }
+  .description {
+    font-size: 1.8rem;
+    margin-bottom: 6.6rem;
+  }
+  .link {
+    font-size: 1.8rem;
+  }
+}
+
+/* 103.3 */
+/* 98.7  */
+/* 45.4% */
+/* 54.6% */

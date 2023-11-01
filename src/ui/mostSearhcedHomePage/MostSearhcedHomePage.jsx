@@ -19,11 +19,16 @@ export default function MostSearhcedHomePage() {
       <h3 className={styles.headingSecondary}>Most Searched Breeds</h3>
       <span className={styles.underline}></span>
 
-      <Link to="/most-searched" className={styles.headingLink}>
-        <h2 className={styles.headingPrimary}>
-          66+ Breeds For you <br /> to discover
-        </h2>
-      </Link>
+      <div className={styles.linkContianer}>
+        <Link to="/most-searched" className={styles.headingLink}>
+          <h2 className={styles.headingPrimary}>
+            66+ Breeds For you <br /> to discover
+          </h2>
+        </Link>
+        <Link className={styles.linkMore} to="/most-searched">
+          Read More <span className={styles.linkArrow}> &rarr;</span>
+        </Link>
+      </div>
       <div className={styles.breedContainer}>
         {/* then show rendrer a sepritae element for each breed */}
         {fourMostSearchedBreeds.map((breed, i) => {

@@ -9,10 +9,25 @@
 
 .main {
 }
-
+/* tablet view: between 600px and 900px */
 @media screen and (min-width: 600px) {
   .appLayout {
     padding: 1.6rem 4rem;
+    padding-bottom: 0;
+  }
+}
+/* tablet landscape view: between 900px and 1200px */
+@media screen and (min-width: 900px) {
+  .appLayout {
+    padding: 2.4rem 7.2rem;
+    padding-bottom: 0;
+  }
+}
+
+/* laptop view: between 1200px and when ever the design breaks */
+@media screen and (min-width: 1200px) {
+  .appLayout {
+    padding: 2.63rem 9.6rem;
     padding-bottom: 0;
   }
 }

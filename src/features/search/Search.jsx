@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import store from '../../store';
 import iconSearch from '../../assets/icon-search.svg';
+import Logo from './../../assets/CatwikiLogoFooter.svg';
 
 // used in filtering the option based on the query
 function checkIfTrue(value) {
@@ -64,6 +65,7 @@ export default function Search() {
 
   return (
     <div className={`${styles.search}`}>
+      <img className={styles.logo} src={Logo} alt="logo" />
       <h2 className={styles.logoHeading}>catwiki</h2>
       <p className={styles.description}>
         Get to know more about <br /> your cat breed
@@ -84,6 +86,7 @@ export default function Search() {
             <ul>
               {filteredOptions.map(breed => (
                 <li
+                  className={styles.searchOption}
                   onClick={() => onOptionClick(breed.name)}
                   key={breed.id}
                   value={breed.id}

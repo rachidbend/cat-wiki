@@ -62,6 +62,10 @@
   width: auto;
 }
 
+.logo {
+  display: none;
+}
+
 /**************************
 **** Search Mobile View ***
 ***************************/
@@ -141,7 +145,7 @@
   padding: 0.7rem 1.8rem 3rem 1.8rem;
 }
 
-/* tablet view */
+/* tablet view: between 600px and 900px */
 @media screen and (min-width: 600px) {
   .search {
     padding: 5.6rem 4rem;
@@ -202,9 +206,92 @@
     padding: 19rem 14rem 3rem 14rem;
   }
 }
-
+/* tablet landscape view: between 900px and 1200px */
 @media screen and (min-width: 900px) {
+  .search {
+    padding: 7rem 6rem;
+    padding-bottom: 9.6rem;
+    margin-top: 3rem;
+  }
   .formMobile {
     display: none;
+  }
+  .logoHeading {
+    display: none;
+  }
+  .logo {
+    display: inline-block;
+    height: 5.6rem;
+    width: auto;
+    margin-bottom: 2.4rem;
+  }
+  .description {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 4.8rem;
+  }
+  .searchInput {
+    width: 28rem;
+    padding: 1.2rem 4.8rem 1.24rem 2.4rem;
+    font-size: 1.8rem;
+  }
+  .iconSearch {
+    left: 24rem;
+    top: 1.3rem;
+    height: 2rem;
+  }
+  /* search options */
+  .searchOptionsContainer {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    width: 28rem;
+    height: 18rem;
+    border-radius: 2.4rem;
+    padding: 1.13rem;
+  }
+  .searchOption {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-black);
+    list-style: none;
+    padding: 1.4rem 1.3rem;
+    border-radius: 1.2rem;
+  }
+  .searchOption:hover {
+    background-color: var(--color-light-gray);
+  }
+}
+
+/* laptop view: between 1200px and when ever the design breaks */
+@media screen and (min-width: 1200px) {
+  .search {
+    margin-top: 3rem;
+    padding: 11.56rem 10.8rem 14.45rem 10.8rem;
+    background-image: url('./../../assets/HeroImagelg.png');
+    border-radius: 4.8rem 4.8rem 0 0;
+  }
+  .logo {
+    display: inline-block;
+    height: 8.7rem;
+    width: auto;
+    margin-bottom: 1.12rem;
+  }
+  .description {
+    margin-bottom: 5.23rem;
+
+    font-size: 2.4rem;
+    line-height: normal;
+  }
+  .searchInput {
+    width: 39rem;
+    padding: 2.38rem 2.86rem;
+    font-size: 1.8rem;
+  }
+  .iconSearch {
+    height: 2.4rem;
+    width: auto;
+    top: 2.28rem;
+    left: 34.73rem;
   }
 }
